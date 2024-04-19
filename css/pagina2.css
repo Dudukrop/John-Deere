@@ -1,0 +1,86 @@
+.formulario-produtividade {
+	height: 320px;
+	margin-top: 20px;
+}
+
+.input-select {
+	width: 100%;
+	height: 300px;
+}
+
+.input-select select {
+	width: 100%;
+	height: 40px;
+	border-radius: 2px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.input-select option {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.escala {
+	margin-top: 100px;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: white;
+}
+
+.algn2 {
+	position: relative;
+	right: 15px;
+}
+
+.algn3 {
+	position: relative;
+	right: 5px;
+}
+
+.escala-baixa {
+	width: 33%;
+	height: 80%;
+	background-color: rgba(0, 155, 0, 0.877);
+	box-shadow: 0px 0px 5px rgb(106, 106, 106);
+}
+
+.escala-media {
+	width: 33%;
+	height: 80%;
+	background-color: rgba(255, 255, 0, 0.819);
+	box-shadow: 0px 0px 5px rgb(106, 106, 106);
+}
+
+.escala-alta {
+	width: 33%;
+	height: 80%;
+	background-color: rgba(255, 0, 0, 0.791);
+	box-shadow: 0px 0px 5px rgb(106, 106, 106);
+}
+
+.descricao-escala {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+	top: 2px;
+	font-size: 18px;
+}
+
+.alta {
+	position: relative;
+	right: 10px;
+}
+
+.medida {
+	width: fit-content;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 50px auto;
+	position: relative;
+	left: 5px;
+}

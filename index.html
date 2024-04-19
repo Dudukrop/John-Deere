@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/pagina1.css">
+	<link rel="stylesheet" href="css/pagina2.css">
+	<link rel="stylesheet" href="css/pagina3.css">
+	<link rel="stylesheet" href="css/pagina4.css">
+	<link rel="stylesheet" href="css/btn.css">
+	<link rel="stylesheet" href="css/cadastro.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+		integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+</head>
+
+<body>
+
+	<div id="cadastro" class="cadastro">
+		<div class="logo">
+			<img src="img/John-Deere-Logo.png">
+		</div>
+		<hr>
+		<div class="cadastro-titulo">
+			<h2>Seja bem vindo à Inteli</h2>
+			<div class="cadastro-descricao">
+				<p>Cadastre-se e tenha acesso a recomendações personalizadas.</p>
+			</div>
+			<hr>
+		</div>
+		<div class="cadastro-inputs">
+			<label for="nome">Nome</label>
+			<input placeholder="Digite seu nome" type="text" id="nome" class="nome">
+			<label for="celular">Telefone</label>
+			<input placeholder="(DDD) Telefone" type="tel" id="celular">
+			<label for="email">E-mail</label>
+			<input placeholder="Digite Seu E-mail" type="email" id="email">
+			<button id="btncadastro">Cadastre-se</button>
+		</div>
+	</div>
+
+	<div id="container" class="container">
+		<header>
+			<img src="img/john-deere-logo-0.png">
+		</header>
+
+		<main id="pag1">
+			<div class="linha-do-tempo">
+				<div class="circle">
+					<span class="numero">1</span>
+				</div>
+				<span class="localizacao">Localização</span>
+				<span class="linha"></span>
+
+				<div class="circle-inativo">
+					<span class="numero">2</span>
+				</div>
+				<span class="linha"></span>
+
+				<div class="circle-inativo">
+					<span class="numero">3</span>
+				</div>
+			</div>
+			<div class="formulario">
+				<h1>Onde fica o seu terreno?</h1>
+				<p class="descricao">O nosso objetivo é oferecer os melhores produtos e serviços disponíveis que lhe
+					ajudem a ter o melhor desempenho possível.</p>
+				<p class="descricao">Para conseguirmos uma resposta personalizada para você,
+					insira os dados geológicos do seu terreno para o localizarmos.</p>
+				<div class="inputs-mapa">
+					<div class="inputs">
+						<div class="latitude">
+							<label class="label-input">Latitude</label>
+							<br>
+							<input placeholder="Insira a latitude" id="latitude" type="text">
+						</div>
+						<div class="longitude">
+							<label class="label-input">Longitude</label>
+							<br>
+							<input placeholder="Insira a longitude" id="longitude" type="text">
+						</div>
+						<button class="btn" id="btn">Search</button>
+					</div>
+					<div id="map" class="mapa"></div>
+				</div>
+				<div class="btn-paginacao">
+					<button id="btn-voltar1" class="btn-voltar">Voltar</button>
+					<button id="btn-avancar1" class="btn-avancar">Avançar</button>
+				</div>
+			</div>
+		</main>
+
+		<main id="pag2" class="main2 display-none">
+			<div class="linha-do-tempo">
+				<div class="circle-inativo">
+					<span class="numero">1</span>
+				</div>
+				<span class="linha"></span>
+
+				<div class="circle">
+					<span class="numero">2</span>
+				</div>
+				<span class="localizacao">Produtividade</span>
+				<span class="linha"></span>
+
+				<div class="circle-inativo">
+					<span class="numero">3</span>
+				</div>
+			</div>
+			<div class="formulario">
+				<h1>Qual a produtividade do seu terreno?</h1>
+				<p class="descricao">Com base na escala abaixo, insira a média de produtividade anual do seu terreno.
+				</p>
+				<div class="formulario-produtividade">
+					<div class="input-select">
+						<select>
+							<option value="">Selecione uma opção</option>
+							<option value="alta">Alta</option>
+							<option value="media">Media</option>
+							<option value="baixa">Baixa</option>
+						</select>
+
+						<div class="escala">
+							<div class="escala-baixa"></div>
+							<div class="escala-media"></div>
+							<div class="escala-alta"></div>
+							<div class="descricao-escala">
+								<span class="">>50</span>
+								<span class="alta">Alta</span>
+								<span class="">43</span>
+								<span>Media</span>
+								<span class="">29</span>
+								<span>Baixa</span>
+								<span class="">0</span>
+							</div>
+						</div>
+
+						<div class="medida">Saca/Hectares</div>
+					</div>
+				</div>
+				<div class="btn-paginacao">
+					<button id="btn-voltar2" class="btn-voltar">Voltar</button>
+					<button id="btn-avancar2" class="btn-avancar">Avançar</button>
+				</div>
+			</div>
+		</main>
+
+		<main id="pag3" class="main2 display-none">
+			<div class="linha-do-tempo">
+				<div class="circle-inativo">
+					<span class="numero">1</span>
+				</div>
+				<span class="linha"></span>
+
+				<div class="circle-inativo">
+					<span class="numero">2</span>
+				</div>
+				<span class="linha"></span>
+
+				<div class="circle">
+					<span class="numero">3</span>
+				</div>
+				<span class="localizacao">Tamanho</span>
+
+			</div>
+			<div class="formulario">
+				<h1>Qual o tamanho do seu terreno para plantio?</h1>
+				<p class="descricao">Com base na escala abaixo, insira a média de produtividade anual do seu terreno.
+				</p>
+				<div class="formulario-produtividade">
+					<div class="input-select">
+						<select>
+							<option value="">Selecione uma opção</option>
+							<option value="">Terra Familiar: Menos de 5 hectares.</option>
+							<option value="">Terreno Pequeno: 5 a 20 hectares.</option>
+							<option value="">Terreno Médio: 20 a 100 hectares.</option>
+							<option value="">Terreno Grande: 100 a 500 hectares.</option>
+							<option value="">Terreno Muito Grande: Mais de 500 hectares.</option>
+						</select>
+
+						<div class="escala2">
+							<div class="tamanho cor1"></div>
+							<div class="tamanho cor2"></div>
+							<div class="tamanho cor3"></div>
+							<div class="tamanho cor4"></div>
+							<div class="tamanho cor5"></div>
+						</div>
+						<div class="descricao-tamanho">
+							<span class="desc">5</span>
+							<span class="desc">5 - 20</span>
+							<span class="desc">20 - 100</span>
+							<span class="desc">100 - 500</span>
+							<span class="desc">>500</span>
+						</div>
+
+						<div class="medida hectares">Hectares</div>
+					</div>
+				</div>
+				<div class="btn-paginacao">
+					<button id="btn-voltar3" class="btn-voltar">Voltar</button>
+					<button id="btn-avancar3" class="btn-avancar">Concluir</button>
+				</div>
+			</div>
+		</main>
+
+
+		<footer id="footer">
+			Copyright © 2023 Deere & Company. Todos os direitos reservados.
+		</footer>
+	</div>
+
+	<div id="pag4" class="main3 display-none">
+		<h1>Inteli Recomenda:</h1>
+		<div class="cards">
+			<div class="card">
+				<img src="img/553-thumb-400x225px.avif">
+				<span class="border">
+					<h2>Pás Mecânicas 553</h2>
+				</span>
+				<span class="border">
+					Compátivel com os tratores 5E 3 cilindros
+				</span>
+				<span class="border">
+					Capacidade do levante á altua máxima de descarga de 1424 kgf
+				</span>
+				<span class="border">
+					Capacidade do levante à altura máxima de 889 kgf
+				</span>
+				<span><button>Ver sobre a Pá Mecânica</button></span>
+			</div>
+			<div class="card">
+				<img src="img/562sl-thumb-400x225px.avif">
+				<span class="border">
+					<h2>Pás Mecânicas 562SL</h2>
+				</span>
+				<span class="border">
+					Compátivel com os tratores 5E 4 cilindros
+				</span>
+				<span class="border">
+					Capacidade do levante á altua máxima de descarga de 976 kgf
+				</span>
+				<span class="border">
+					Capacidade do levante à altura máxima de 1014 kgf
+				</span>
+				<span><button>Ver sobre a Pá Mecânica</button></span>
+			</div>
+			<div class="card">
+				<img src="img/563sl-thumb-400x225px.avif">
+				<span class="border">
+					<h2>Pás Mecânicas 563SL</h2>
+				</span>
+				<span class="border">
+					Compátivel com os tratores 6E/J 4 cilindros
+				</span>
+				<span class="border">
+					Capacidade do levante á altua máxima de descarga de 1410 kgf
+				</span>
+				<span class="border">
+					Capacidade do levante à altura máxima de 1460 kgf
+				</span>
+				<span><button>Ver sobre a Pá Mecânica</button></span>
+			</div>
+			<div class="card">
+				<img src="img/673sl-thumb-400x225px.webp">
+				<span class="border">
+					<h2>Pás Mecânicas 673SL</h2>
+				</span>
+				<span class="border">
+					Compátivel com os tratores 6E/J 4 cilindros
+				</span>
+				<span class="border">
+					Capacidade do levante á altua máxima de descarga de 1630 kgf
+				</span>
+				<span class="border">
+					Capacidade do levante à altura máxima de 1720 kgf
+				</span>
+				<span><button>Ver sobre a Pá Mecânica</button></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.js"
+		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+		integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	<script src="js/Paginacao.js"></script>
+	<script src="js/mapa.js"></script>
+	<script src="js/mask.js"></script>
+</body>
+
+</html>
